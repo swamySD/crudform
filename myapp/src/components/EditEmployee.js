@@ -29,7 +29,8 @@ const EditEmployee = () => {
       navigate('/')
     })
       .catch((error)=>console.log(error))
-  }
+
+      console.log('test')
   
 useEffect(()=>{
   fetch('http://localhost:8000/employee/'+empid)
