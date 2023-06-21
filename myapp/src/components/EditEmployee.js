@@ -1,7 +1,8 @@
 import React ,{useEffect,useState}from 'react'
 import { useParams,useNavigate,Link } from 'react-router-dom'
-const EditEmployee = () => {
-  // const [employeeData,setEmployeeData]=useState(null)
+
+const EditEmployee=()=> {
+ 
   const [id,setIdChange]=useState("")
   const [name,setName]=useState("")
   const [email,setEmail]=useState("")
@@ -30,8 +31,8 @@ const EditEmployee = () => {
     })
       .catch((error)=>console.log(error))
 
-      console.log('test')
-  
+      
+}
 useEffect(()=>{
   fetch('http://localhost:8000/employee/'+empid)
       .then((res)=>res.json())
